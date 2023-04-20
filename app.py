@@ -10,6 +10,10 @@ def hello_world():  # put application's code here
     return 'Hello World!'
 
 
+@app.route('/data')
+def get_data():  # put application's code here
+    return 'Data is Comming '
+
 @app.route('/service',  methods=['GET'])
 def service():  # put application's code here
     service_result = {
