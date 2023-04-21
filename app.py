@@ -24,7 +24,7 @@ def service():  # put application's code here
     return service_result
 
 @app.route('/basic',  methods=['GET'])
-def service():  # put application's code here
+def basic():  # put application's code here
     service_result = {
         "name": "basic",
         "owner":"Demo Basic",
