@@ -23,6 +23,15 @@ def service():  # put application's code here
     }
     return service_result
 
+@app.route('/basic',  methods=['GET'])
+def service():  # put application's code here
+    service_result = {
+        "name": "basic",
+        "owner":"Demo Basic",
+        "description":"The Basic Demo is Great"
+    }
+    return service_result
+
 
 if __name__ == '__main__':
     app.run()
