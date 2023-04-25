@@ -27,7 +27,8 @@ metadata:
   annotations:
     app.komodor.com/service.link.frontend: http://34.173.139.195:5000/
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
+    app.komodor.com/service.link.k8s-frontend-fileset1: https://github.com/hughbrien/frontend/blob/fileset1/frontend.yaml
+    app.komodor.com/service.link.frontend: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/8f72129cd2be14ef629567213ea39fea64142e3c
     app.komodor.com/tracked_files: |
       *.yaml
