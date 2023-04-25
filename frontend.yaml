@@ -8,6 +8,8 @@ kind: Service
 metadata:
   name: frontend
   namespace: frontend
+  labels:
+    app: frontend
 spec:
   selector:
     app: frontend
@@ -22,11 +24,23 @@ kind: Deployment
 metadata:
   name: frontend
   namespace: frontend
+  annotations:
+    app.komodor.com/service.link.frontend: http://34.71.109.35:5000
+    app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
+    app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/827fb20978f99540de7daae49f43cb9db9750970
+    app.komodor.com/tracked_files: |
+      *.yaml
+    app.komodor.com/app: https://github.com/hughbrien/frontend
+    app.komodor.com/app.ref: 827fb20978f99540de7daae49f43cb9db9750970
+
+  labels:
+    app: frontend
 spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -34,7 +48,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: hughbrien/frontend:1.0.3
+        image: hughbrien/frontend:2.0.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
