@@ -41,4 +41,7 @@ kubectl rollout restart deployment/frontend
 - [Frontend Service](https://app.komodor.com/services/demo.google-se-cluster-frontend.frontend)
 
 ## Need a link to the Services 
-[Frontend Actual](http://34.173.139.195:5000/)
+
+```kuberctl get service -n frontend```
+
+- [Frontend Actual](http://34.173.139.195:5000/)
