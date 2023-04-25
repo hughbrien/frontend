@@ -9,6 +9,7 @@ Frontend in Python
 
 - Make changes to the Source Code 
 - Commit and Push the Changes
+- Update the Manifest with the Change Hash from the Commit
 - Build and Push the Deployment to a PUBLIC/Private Repository 
 - Update/Confirm  your Deployment manifest has the correct Ropository Image reference
 
@@ -34,3 +35,6 @@ kubectl rollout restart deployment/frontend
 
 ## View Changes in Komodor 
 - [Frontend Service](https://app.komodor.com/services/demo.google-se-cluster-frontend.frontend)
+
+## Need a link to the Services 
+[Frontend Actual](http://34.173.139.195:5000/)

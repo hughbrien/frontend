@@ -25,14 +25,14 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
-    app.komodor.com/service.link.frontend: http://34.71.109.35:5000
+    app.komodor.com/service.link.frontend: http://34.173.139.195:5000/
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/827fb20978f99540de7daae49f43cb9db9750970
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/390ce4c9ffd2f2ad4a3290855cbc1f6d65e9a64d
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: ea59c737dd90e56b06156fbb34e8172a76dbb7cd
+    app.komodor.com/app.ref: 390ce4c9ffd2f2ad4a3290855cbc1f6d65e9a64d
 
   labels:
     app: frontend
