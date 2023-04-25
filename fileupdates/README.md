@@ -45,3 +45,18 @@ kubectl rollout restart deployment/frontend
 ```kuberctl get service -n frontend``` will return the PUBLIC IPADDRESS 
 
 - [Frontend Actual](http://34.173.139.195:5000/)
+
+## Automating the Process
+
+Copy files from ./fileupdates
+cp ./fileupdates/* . 
+Commit and Push changes to git 
+commit -m"New Updates to Frontend `date`"
+Get git Hash
+Docker Build the new Image 
+Docke Push the new Image 
+Search and Replace the Git Hash on the frontend.yaml manifest
+- ```docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .```
+Create a new Frontend Deployment using kubectl 
+- - ``` k apply -f frontend.yaml         ```
+
