@@ -2,7 +2,7 @@
 Frontend in Python
 
 - Ensure you are access to the appropriate docker runtime
-- You also need to access to a Repository
+- You also need to access to a Repository. Updates
 
 ```
 export VERSION=2.0.1

@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():  # put application's code here
     hostname = socket.gethostname()
-    return '<h1>Hello World ' + hostname + '!!!</h1><h2>Author Hugh Brien</h2>'
+    return '<h1>Hello World ' + hostname + '!!!</h1><h2>Author Hugh Brien</h2><h2>More Changes</h2>'
 
 @app.route('/data')
 def get_data():  # put application's code here
