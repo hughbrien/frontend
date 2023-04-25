@@ -32,7 +32,7 @@ metadata:
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 54424d584609f6d2cffb62bd68144abcd852c052
+    app.komodor.com/app.ref: c63fde53edc46bdf54a0351f9b6ba9c07252f1a2
 
   labels:
     app: frontend
