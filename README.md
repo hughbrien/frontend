@@ -18,7 +18,7 @@ Frontend in Python
 - Update/Confirm  your Deployment manifest has the correct Ropository Image reference
 
 
-
+## Build the Image and Push 
 ```
 export VERSION=2.0.1
 docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .
@@ -42,6 +42,6 @@ kubectl rollout restart deployment/frontend
 
 ## Need a link to the Services 
 
-```kuberctl get service -n frontend```
+```kuberctl get service -n frontend``` will return the PUBLIC IPADDRESS 
 
 - [Frontend Actual](http://34.173.139.195:5000/)
