@@ -49,9 +49,17 @@ kubectl rollout restart deployment/frontend
 ## Automating the Process
 
 Copy files from ./fileupdates
+```
 cp ./fileupdates/* . 
+```
+
 Commit and Push changes to git 
-commit -m"New Updates to Frontend `date`"
+
+```
+git add . 
+git commit -m"New Updates to Frontend `date`"
+
+```
 Get git Hash
 Docker Build the new Image 
 Docke Push the new Image 
