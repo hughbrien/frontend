@@ -32,7 +32,7 @@ metadata:
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 827fb20978f99540de7daae49f43cb9db9750970
+    app.komodor.com/app.ref: 54424d584609f6d2cffb62bd68144abcd852c052
 
   labels:
     app: frontend
@@ -40,7 +40,7 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: hughbrien/frontend:2.0.0
+        image: docker.io/hughbrien/frontend:2.0.1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
