@@ -5,6 +5,8 @@
 *.pyo
 env/
 venv/
+lib/
+bin/
 .venv/
 env*
 dist/

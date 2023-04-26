@@ -45,3 +45,18 @@ kubectl rollout restart deployment/frontend
 ```kuberctl get service -n frontend``` will return the PUBLIC IPADDRESS 
 
 - [Frontend Actual](http://34.173.139.195:5000/)
+
+
+## From the Beginning 
+So you run your service local. This is very python developer/specific 
+
+```git clone https://github.com/hughbrien/frontend ```
+
+```python -m venv . ```
+
+```python -m venv venv```
+
+```source myvenv/bin/activate```
+
+```docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .```
+
