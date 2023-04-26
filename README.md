@@ -47,10 +47,13 @@ kubectl rollout restart deployment/frontend
 - [Frontend Actual](http://34.173.139.195:5000/)
 
 
-## From the Beginning 
+## From the Beginning Each Step. 
 So you run your service local. This is very python developer/specific 
 
 ```git clone https://github.com/hughbrien/frontend ```
+
+Make changes to the app.py, Dockerfile, README.md 
+
 
 ```python -m venv . ```
 
@@ -59,4 +62,7 @@ So you run your service local. This is very python developer/specific
 ```source myvenv/bin/activate```
 
 ```docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .```
+
+
+```kubectl apply -f frontend.yaml```
 

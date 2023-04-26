@@ -2,13 +2,14 @@ from flask import Flask
 #import json
 #import jsonify
 import socket
+import datetime
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():  # put application's code here
     hostname = socket.gethostname()
-    return '<h1>Welcome to the Rest of the World ' + hostname + '!!!</h1><h2>Author Hugh Brien</h2><h2>More Changes</h2><h3>main</h3>'
+    return '<h1>Welcome to the Rest of the World ' + hostname + '!!!</h1><h2>Author Hugh Brien</h2><h3>main</h3>'
 
 @app.route('/data')
 def get_data():  # put application's code here
