@@ -1,4 +1,4 @@
-# frontend - fileset2
+# frontend
 Frontend in Python
 
 - Ensure you are access to the appropriate docker runtime
