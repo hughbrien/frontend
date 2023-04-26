@@ -1,8 +1,14 @@
 # frontend
 Frontend in Python
 
+The Project was created to demonstrate and exeplify the Integration between Git compatiable Source Controls and Komodor 
+
+### PreRequisites 
+
+- Fork this Project 
 - Ensure you are access to the appropriate docker runtime
-- You also need to access to a Repository. Updates
+- You also need to access to a **Repository**. Updates
+- 
 
 
 ## Changes in Komodor 
