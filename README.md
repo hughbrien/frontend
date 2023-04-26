@@ -1,14 +1,13 @@
-# frontend
+# Komodor Frontend Service Demonstration
 Frontend in Python
 
-The Project was created to demonstrate and exeplify the Integration between Git compatiable Source Controls and Komodor 
+The Project was created to demonstrate and exeplify the Integration between [Git](https://git-scm.com/) based source control and [Komodor](http://www.komodor.com)
 
 ### PreRequisites 
 
-- Fork this Project 
+- ***Fork this Project***
 - Ensure you are access to the appropriate docker runtime
 - You also need to access to a **Repository**. Updates
-- 
 
 
 ## Changes in Komodor 
