@@ -5,10 +5,10 @@ The Project was created to demonstrate and exeplify the Integration between [Git
 
 ### PreRequisites 
 
-- ***Fork this Project***
-- Ensure you are access to the appropriate docker runtime
-- You also need to access to a **Repository**. Updates
-
+- ***Fork this Project*** - GitHub Repository
+- You will need Commit and Push privledges on your Source code repository
+- Ensure you are have access to an appropriate docker runtime
+- Push Access to a Docker Image  **Repository**. I am usign {DockerHub}(https://hub.docker.com/repository/docker/hughbrien/frontend/general)
 
 ## Changes in Komodor 
 
