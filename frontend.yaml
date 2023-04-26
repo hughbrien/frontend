@@ -37,6 +37,8 @@ metadata:
 
   labels:
     app: frontend
+    branch: main
+    version: 2.0.1
 spec:
   selector:
     matchLabels:
