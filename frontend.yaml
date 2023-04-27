@@ -29,11 +29,11 @@ metadata:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.frontend-fileset2: https://github.com/hughbrien/frontend/blob/fileset2/frontend.yaml
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/8f72129cd2be14ef629567213ea39fea64142e3c
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/c89758375954215ace05026143d86f226d75c7d2
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 8f72129cd2be14ef629567213ea39fea64142e3c
+    app.komodor.com/app.ref: c89758375954215ace05026143d86f226d75c7d2
 
   labels:
     app: frontend
