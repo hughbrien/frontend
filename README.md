@@ -2,8 +2,7 @@
 Frontend in Python
 
 - Ensure you are access to the appropriate docker runtime
-- You also need to access to a Repository Updates
-- Latest update for Ben
+- You also need to access to a Repository. Updates
 
 
 ## Changes in Komodor 
