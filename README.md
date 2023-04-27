@@ -1,5 +1,5 @@
 # frontend
-Frontend in Python
+Frontend in Python demonstrates Komodor Integration with Github Changes
 
 - Ensure you are access to the appropriate docker runtime
 - You also need to access to a Repository Updates
