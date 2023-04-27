@@ -3,8 +3,6 @@ Frontend in Python demonstrates Komodor Integration with Github Changes
 
 - Ensure you are access to the appropriate docker runtime
 - You also need to access to a Repository Updates
-- Update for Ben
-
 
 ## Changes in Komodor 
 
@@ -31,6 +29,18 @@ kubectl apply -f ./frontend.yaml
 
 ```
 
+## From the Beginning Each Step. 
+So you run your service local. This is very python developer/specific 
+
+```git clone https://github.com/hughbrien/frontend ```
+
+Make changes to the app.py, Dockerfile, README.md 
+
+```docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .```
+
+
+```kubectl apply -f frontend.yaml```
+
 ## Rollout 
 ```
 export VERSION=2.0.1
@@ -48,15 +58,4 @@ kubectl rollout restart deployment/frontend
 - [Frontend Actual](http://34.173.139.195:5000/)
 
 
-## From the Beginning Each Step. 
-So you run your service local. This is very python developer/specific 
-
-```git clone https://github.com/hughbrien/frontend ```
-
-Make changes to the app.py, Dockerfile, README.md 
-
-```docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .```
-
-
-```kubectl apply -f frontend.yaml```
 
