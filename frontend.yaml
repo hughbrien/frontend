@@ -29,11 +29,11 @@ metadata:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.frontend: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/de6802b89f110e0f377819fdee00e61444739ebb
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/35bb7f75e20d44f50b05b047033b28cb75c9ca30
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: de6802b89f110e0f377819fdee00e61444739ebb
+    app.komodor.com/app.ref: 35bb7f75e20d44f50b05b047033b28cb75c9ca30d
 
   labels:
     app: frontend
@@ -56,3 +56,15 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
+        livenessProbe:
+          httpGet:
+            path: /healthz/live
+            port: 80
+          initialDelaySeconds: 5
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /healthz/ready
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5

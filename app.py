@@ -11,6 +11,14 @@ def hello_world():  # put application's code here
     hostname = socket.gethostname()
     return '<h1>Welcome to the Komodor Demo ' + hostname + '!!!</h1><h2>Demo For Ben  by Hugh</h2><h3>main</h3>'
 
+@app.route('/healthz/live')
+def live():  # put application's code here
+    return '{"status":"live"}'
+
+@app.route('/healthz/ready')
+def ready():  # put application's code here
+    return '{"status":"ready"}'
+
 @app.route('/data')
 def get_data():  # put application's code here
     return 'Data is Comming '
