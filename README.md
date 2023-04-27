@@ -55,13 +55,6 @@ So you run your service local. This is very python developer/specific
 
 Make changes to the app.py, Dockerfile, README.md 
 
-
-```python -m venv . ```
-
-```python -m venv venv```
-
-```source myvenv/bin/activate```
-
 ```docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .```
 
 
