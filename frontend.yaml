@@ -39,6 +39,7 @@ metadata:
     app: frontend
     branch: main
     version: 2.0.1
+    author: hughbrien
 spec:
   selector:
     matchLabels:
