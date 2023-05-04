@@ -9,10 +9,10 @@ app = Flask(__name__)
 @app.route('/')
 def welcome_message_json():  # put application's code here
     hostname = socket.gethostname()
-    return '{"message":"Welcome to Everyone",' \
+    return '{"message":"Welcome to the Kubernetes Demo Everyone ",' \
            '"hostname":"' + hostname + '",' \
            '"name":"Hugh Brien",' \
-           '"email":"hugh@komodor.com"}'
+           '"email":"hugh@komodor.com"}
 
 @app.route('/healthz/live')
 def live():  # liveness
