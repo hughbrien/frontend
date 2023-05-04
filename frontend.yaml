@@ -8,16 +8,16 @@ metadata:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.frontend: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/67be0d81658abefc04de1c8ba4970c9a68081cfc
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/2701e58f84a353a083564e713c63f9ace4a5a80f
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 67be0d81658abefc04de1c8ba4970c9a68081cfc
+    app.komodor.com/app.ref: 2701e58f84a353a083564e713c63f9ace4a5a80f
 
   labels:
     app: frontend
     branch: main
-    version: 2.0.2
+    version: latest
     author: hughbrien
 spec:
   selector:
@@ -32,19 +32,19 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: docker.io/hughbrien/frontend:2.0.2
+        image: docker.io/hughbrien/frontend:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
         livenessProbe:
           httpGet:
             path: /healthz/live
-            port: 80
+            port: 5000
           initialDelaySeconds: 30
           timeoutSeconds: 15
         readinessProbe:
           httpGet:
             path: /healthz/ready
-            port: 80
+            port: 5000
           initialDelaySeconds: 30
           periodSeconds: 15

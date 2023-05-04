@@ -31,6 +31,7 @@ def service():  # put application's code here
     service_result = {
         "name": "frontend",
         "owner":"Hugh Brien",
+        "phone":"5551212",
         "email":"hugh@komodor.com",
         "description":"The HTTP service to catch all incoming data"
     }

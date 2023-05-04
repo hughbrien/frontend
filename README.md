@@ -2,8 +2,12 @@
 Frontend in Python
 
 - Ensure you are access to the appropriate docker runtime
-- You also need to access to a Repository Updates
-- Update for Ben
+- You also need the following
+- Cluster Authentication
+- Read / Write Access to the  Repository
+- Read / Write Git Repository 
+
+
 
 
 ## Changes in Komodor 
