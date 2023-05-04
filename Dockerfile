@@ -1,7 +1,7 @@
 FROM python:3.9-buster
 
 WORKDIR /app
-# Double Check comments / Added Comments
+# Double Check comments / Changes for Demo
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
