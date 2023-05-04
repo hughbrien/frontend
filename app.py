@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello_world():  # put application's code here
     hostname = socket.gethostname()
-    return '<h1>Welcome to Frontend Demo ' + hostname + '!!!</h1><h2>Demo  by Hugh</h2><h3>Branch main</h3>'
+    return '<h1>Welcome Everyone to Frontend Demo ' + hostname + '!!!</h1><h2>Demo  by Hugh</h2><h3>Branch main</h3>'
 
 @app.route('/healthz/live')
 def live():  # liveness

@@ -8,11 +8,11 @@ metadata:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.frontend: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/d32c2b442bd6f93a98e9889a1b218a14434301e1
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/67be0d81658abefc04de1c8ba4970c9a68081cfc
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: d32c2b442bd6f93a98e9889a1b218a14434301e1
+    app.komodor.com/app.ref: 67be0d81658abefc04de1c8ba4970c9a68081cfc
 
   labels:
     app: frontend
@@ -23,7 +23,7 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
