@@ -1,5 +1,5 @@
 # frontend
-Frontend in Python / Changes for the Demo
+Frontend in Python / Changes for the Demo / Fixed the Bug
 
 - Ensure you are access to the appropriate docker runtime
 - You also need the following

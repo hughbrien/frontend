@@ -12,7 +12,7 @@ def welcome_message_json():  # put application's code here
     return '{"message":"Welcome to the Kubernetes Demo Everyone ",' \
            '"hostname":"' + hostname + '",' \
            '"name":"Hugh Brien",' \
-           '"email":"hugh@komodor.com - broken"}
+           '"email":"hugh@komodor.com - broken"}'
 
 
 @app.route('/healthz/live')
