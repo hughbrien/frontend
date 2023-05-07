@@ -11,11 +11,14 @@ app = Flask(__name__)
 
 @app.route('/webhook',  methods=['GET','POST'])
 def webhook():  # put application's code here
-    data = request.data
-    print(data)
-    # need posted data here
-    service_result = data
-    return service_result
+    content_type = request.headers.get('Content-Type')
+    if (content_type == 'application/json'):
+        json = request.json
+        return json
+    else:
+        return 'Content-Type not supported!'
+
+
 @app.route('/')
 def welcome_message_json():  # put application's code here
     hostname = socket.gethostname()
