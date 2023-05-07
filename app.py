@@ -1,4 +1,6 @@
 from flask import Flask
+from flask import request
+
 #import json
 #import jsonify
 import socket
@@ -6,6 +8,14 @@ import datetime
 
 app = Flask(__name__)
 
+
+@app.route('/webhook',  methods=['GET','POST'])
+def webhook():  # put application's code here
+    data = request.data
+    print(data)
+    # need posted data here
+    service_result = data
+    return service_result
 @app.route('/')
 def welcome_message_json():  # put application's code here
     hostname = socket.gethostname()
@@ -37,33 +47,6 @@ def service():  # put application's code here
         "description":"The HTTP service to catch all incoming data"
     }
     return service_result
-
-@app.route('/basic',  methods=['GET'])
-def basic():  # put application's code here
-    service_result = {
-        "name": "basic",
-        "owner":"Demo Basic",
-        "description":"The Basic Demo is Great"
-    }
-    return service_result
-
-@app.route('/ready',  methods=['GET'])
-def readiness():  # put application's code here
-    service_result = {
-        "name": "frontend",
-        "status":"ready",
-        "description":"The frontend service is Ready"
-    }
-    return service_result
-@app.route('/live',  methods=['GET'])
-def liveness():  # put application's code here
-    service_result = {
-        "name": "frontend",
-        "status":"live",
-        "description":"The Frontend Service is Live"
-    }
-    return service_result
-
 
 if __name__ == '__main__':
     app.run()
