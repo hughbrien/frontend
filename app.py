@@ -34,6 +34,7 @@ def version():  # put application's code here
     json = {}
     json["timestamp"] =  datetime.now()
     json["version"] = SERVICE_VERSION
+    json["service_name"] = "frontend"
     print(json)
     return json
 
