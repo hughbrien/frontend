@@ -18,7 +18,6 @@ def webhook():  # put application's code here
         json["handler"] = "frontend"
         json["url"] = "http://34.172.104.248:5000/webhook"
         print(type(json))
-
         return json
     else:
         return 'Content-Type not supported!'
