@@ -7,7 +7,7 @@ import time
 app = Flask(__name__)
 
 GLOBAL_lIST = []
-SERVICE_VERSION = "2.0.4"
+SERVICE_VERSION = "2.0.5"
 
 @app.route('/webhook',  methods=['GET','POST'])
 def webhook():  # put application's code here
@@ -37,7 +37,7 @@ def version():  # put application's code here
     print(json)
     return json
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def welcome_message_json():  # put application's code here
     hostname = socket.gethostname()
     return '{"message":"Welcome to the Kubernetes Demo Everyone ",' \
@@ -54,20 +54,6 @@ def live():  # liveness
 def ready():  # readyness
     return '{"status":"ready"}'
 
-@app.route('/data')
-def get_data():  # put application's code here
-    return 'Data is Coming '
-
-@app.route('/service',  methods=['GET'])
-def service():  # put application's code here
-    service_result = {
-        "name": "frontend",
-        "owner":"Hugh Brien",
-        "phone":"5551212",
-        "email":"hugh@komodor.com",
-        "description":"The HTTP service to catch all incoming data"
-    }
-    return service_result
 
 if __name__ == '__main__':
     app.run()

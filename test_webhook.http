@@ -4,7 +4,15 @@ POST http://34.172.104.248:5000/webhook
 Content-Type: application/json
 
 {
-  "first_name": "Hugh",
+  "first_name": "LAST",
   "last_name": "Brien"
 }
+
+### Get Last Item
+GET  http://34.172.104.248:5000/lastrequest
+
+### Get Version
+GET  http://34.172.104.248:5000/version
+
+
 
