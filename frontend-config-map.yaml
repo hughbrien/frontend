@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: frontend
+  name: frontend-configuration-map
+#None of these values do anything
+data:
+  debug: 'true'
+
+  port: 5000
+  useAPIaccelerator: 'true'
+  author: 'Hugh Brien'
+  email: 'hugh@komodor.com'
