@@ -1,16 +1,13 @@
 from flask import Flask
 from flask import request
-
-#import json
-#import jsonify
 import socket
-import datetime
+from datetime import datetime
+import time
 
 app = Flask(__name__)
 
-GLOBAL_FILE = "./request.log"
-GLOBAL_DICTIONARY = {}
 GLOBAL_lIST = []
+SERVICE_VERSION = "2.0.4"
 
 @app.route('/webhook',  methods=['GET','POST'])
 def webhook():  # put application's code here
@@ -30,6 +27,15 @@ def webhook():  # put application's code here
 def lastrequest():  # put application's code here
     content_type = request.headers.get('Content-Type')
     return GLOBAL_lIST[-1]
+
+@app.route('/version',  methods=['GET'])
+def version():  # put application's code here
+    headers = {'content-type': 'application/json'}
+    json = {}
+    json["timestamp"] =  datetime.now()
+    json["version"] = SERVICE_VERSION
+    print(json)
+    return json
 
 @app.route('/')
 def welcome_message_json():  # put application's code here

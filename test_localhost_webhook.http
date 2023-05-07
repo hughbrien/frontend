@@ -7,7 +7,19 @@ Content-Type: application/json
   "last_name": "BRIEN"
 }
 
+###
+POST http://localhost:5000/webhook
+Content-Type: application/json
+
+{
+  "first_name": "Itiel",
+  "last_name": "Shwartz"
+}
+
 ### Get Last Item
 GET  http://localhost:5000/lastrequest
+
+### Get Version
+GET  http://localhost:5000/version
 
 
