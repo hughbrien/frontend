@@ -8,15 +8,3 @@ Content-Type: application/json
   "last_name": "Brien"
 }
 
-### New Request
-
-## New Post
-GET http://34.172.104.248:5000/webhook
-
-Content-Type: application/json
-{
-  "first_name": "Hugh",
-  "last_name": "Brien"
-}
-
-

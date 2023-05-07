@@ -8,6 +8,9 @@ import datetime
 
 app = Flask(__name__)
 
+GLOBAL_FILE = "./request.log"
+GLOBAL_DICTIONARY = {}
+GLOBAL_lIST = []
 
 @app.route('/webhook',  methods=['GET','POST'])
 def webhook():  # put application's code here
@@ -18,10 +21,15 @@ def webhook():  # put application's code here
         json["handler"] = "frontend"
         json["url"] = "http://34.172.104.248:5000/webhook"
         print(type(json))
+        GLOBAL_lIST.append(json)
         return json
     else:
         return 'Content-Type not supported!'
 
+@app.route('/lastrequest',  methods=['GET'])
+def lastrequest():  # put application's code here
+    content_type = request.headers.get('Content-Type')
+    return GLOBAL_lIST[-1]
 
 @app.route('/')
 def welcome_message_json():  # put application's code here
