@@ -14,6 +14,11 @@ def webhook():  # put application's code here
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         json = request.json
+        json["timestamp"] = datetime.datetime.now()
+        json["handler"] = "frontend"
+        json["url"] = "http://34.172.104.248:5000/webhook"
+        print(type(json))
+
         return json
     else:
         return 'Content-Type not supported!'
