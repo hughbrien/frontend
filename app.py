@@ -18,6 +18,7 @@ def webhook():  # put application's code here
         json["handler"] = "frontend"
         json["url"] = "http://34.172.104.248:5000/webhook"
         print(type(json))
+        #comments are fun
         GLOBAL_lIST.append(json)
         return json
     else:
