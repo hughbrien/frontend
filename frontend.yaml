@@ -4,39 +4,41 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
-    app.komodor.com/service.link.webhook: http://34.172.104.248:5000/webhook
+    app.komodor.com/service.link.webhook: http://35.202.170.30:5000/webhook
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.webhook: http://34.172.104.248:5000/webhook
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/3c5cc4262e44b542b41636678338e7b088973e46
+    app.komodor.com/deploy.link.webhook: http://35.202.170.30:5000/webhook
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/151f6dabc3c11c3b1295a66640ccbc79e9bd5fa1
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 3c5cc4262e44b542b41636678338e7b088973e46
+    app.komodor.com/app.ref: 151f6dabc3c11c3b1295a66640ccbc79e9bd5fa1
 
   labels:
     app: frontend
     branch: main
-    version: 2.0.5
+    version: 2.0.6
     author: hughbrien
 spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
         app: frontend
         branch: main
-        version: 2.0.5
+        version: 2.0.6
     spec:
       containers:
       - name: frontend
-        image: docker.io/hughbrien/frontend:2.0.5
+        image: docker.io/hughbrien/frontend:2.0.6
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
+        securityContext:
+          allowPrivilegeEscalation: false
         livenessProbe:
           httpGet:
             path: /healthz/live
