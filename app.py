@@ -7,7 +7,7 @@ import time
 app = Flask(__name__)
 
 GLOBAL_lIST = []
-SERVICE_VERSION = "2.0.5"
+SERVICE_VERSION = "2.0.7"
 
 @app.route('/webhook',  methods=['GET','POST'])
 def webhook():  # put application's code here
@@ -35,6 +35,7 @@ def version():  # put application's code here
     json["timestamp"] =  datetime.now()
     json["version"] = SERVICE_VERSION
     json["service_name"] = "frontend"
+    json["author"] = "hughpbrien"
     print(json)
     return json
 

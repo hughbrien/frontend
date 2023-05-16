@@ -7,6 +7,15 @@ Frontend in Python / Changes for the Demo / Fixed the Bug
 - Read / Write Access to the  Repository
 - Read / Write Git Repository 
 
+
+## API
+- @app.route('/webhook',  methods=['GET','POST'])
+- @app.route('/lastrequest',  methods=['GET'])
+- @app.route('/version',  methods=['GET'])
+- @app.route('/healthz/live')
+-@app.route('/healthz/ready')
+
+
 ## Changes in Komodor 
 
 - Make changes to the Source Code 
@@ -31,6 +40,8 @@ docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/front
 kubectl apply -f ./frontend.yaml
 
 ```
+
+
 
 ## Rollout 
 ```
