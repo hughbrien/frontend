@@ -7,9 +7,6 @@ Frontend in Python / Changes for the Demo / Fixed the Bug
 - Read / Write Access to the  Repository
 - Read / Write Git Repository 
 
-
-
-
 ## Changes in Komodor 
 
 - Make changes to the Source Code 
@@ -61,6 +58,26 @@ Make changes to the app.py, Dockerfile, README.md
 
 ```docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .```
 
-
 ```kubectl apply -f frontend.yaml```
 
+### Dealing with secrets 
+
+```
+echo -n 'S!B\*d$zDsb=' > ./password.txt
+
+kubectl create secret generic db-user-pass --from-file=./password.txt
+```
+
+View the contents of the Secret you created:
+```
+kubectl get secret db-user-pass -o jsonpath='{.data}'
+```
+The output is similar to:
+```
+{ "password": "UyFCXCpkJHpEc2I9"}
+```
+Decode the password data:
+
+echo 'UyFCXCpkJHpEc2I9' | base64 --decode
+The output is similar to:
+S!B\*d$zDsb=

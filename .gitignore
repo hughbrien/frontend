@@ -25,3 +25,6 @@ htmlcov/
 .coverage
 .coverage.*
 *,cover
+password.txt
+username.txt
+apitoken.txt

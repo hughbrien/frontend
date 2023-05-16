@@ -6,8 +6,7 @@ metadata:
 #None of these values do anything
 data:
   debug: 'true'
-
-  port: 5000
+  port: '5000'
   useAPIaccelerator: 'true'
   author: 'Hugh Brien'
   email: 'hugh@komodor.com'

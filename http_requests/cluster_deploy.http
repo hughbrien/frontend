@@ -1,0 +1,18 @@
+### Service Deployment on Kubernetes. Event generate by Komodor
+
+POST https://console.transposit.com/api/v1/mc/webhook/c6bdc8ad-1517-4b63-b2cb-b9b63588d0b2/crepueljgj3hoiciemiudt6hd7
+
+{
+  "cluster": " google-se-cluster",
+  "namespace": "frontend",
+  "serviceName": "demo.google-se-cluster-frontend.frontend",
+  "resourceName": "frontend",
+  "status": "open",
+  "startTime": "0001-01-01 00:00:00 +0000 UTC",
+  "closeTime": "<no value>",
+  "monitorType": "deploy",
+  "issueURL": "https://app.komodor.com/services/demo.google-se-cluster-frontend.frontend?resource-events-tab-timeWindow=1683754010208-1683754245917&resource-events-tab-timeframe=custom&resource-events-tab-eventId=demo-google-se-cluster-frontend-frontend-1-786b64c2d2e54080b5183ba9f60cfb12",
+  "issueDetails": "[]"
+}
+
+

@@ -1,0 +1,12 @@
+{
+  "clusterName": "google_se_cluster",
+  "createTime": "0001-01-01 00:00:00 +0000 UTC",
+  "owner": "hugh@komodor.com"
+}
+
+
+curl -X POST 'https://console.transposit.com/api/v1/mc/webhook/3ef25dbe-c9a1-4362-a41e-1424e9c6ad6f/8csm563b8adom0096uh3m0goq1' -H 'Content-Type: application/json' -d '{
+  "clusterName":"google_se_cluster",
+ "createTime": "0001-01-01 00:00:00 +0000 UTC",
+  "owner":"hugh@komodor.com"}
+'
