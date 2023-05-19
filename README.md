@@ -13,7 +13,7 @@ Frontend in Python / Changes for the Demo / Fixed the Bug
 - @app.route('/lastrequest',  methods=['GET'])
 - @app.route('/version',  methods=['GET'])
 - @app.route('/healthz/live')
--@app.route('/healthz/ready')
+- @app.route('/healthz/ready')
 
 
 ## Changes in Komodor 
