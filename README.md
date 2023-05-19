@@ -30,6 +30,14 @@ Frontend in Python / Changes for the Demo / Fixed the Bug
 
 
 ## Build the Image and Push 
+
+Clone this repository
+```
+git clone https://github.com/hughbrien/frontend
+cd frontend
+```
+
+
 ```
 export VERSION=2.0.1
 docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .
