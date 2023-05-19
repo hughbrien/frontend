@@ -1,7 +1,8 @@
 # frontend
 Frontend in Python / Changes for the Demo / Fixed the Bug
 
-- Ensure you are have access to an  appropriate docker runtime/envioronment such as ***Docker Desktop***
+- Ensure you are have access to an  appropriate docker runtime/envioronment such as ***Docker Desktop*** [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+- 
 - You also need the following
 - Cluster Authentication
 - Read / Write Access to the  Repository
