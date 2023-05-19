@@ -39,8 +39,8 @@ cd frontend
 
 
 ```
-export VERSION=2.0.1
-docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .
+export VERSION=X.X.X
+docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:X.X.X .
 ```
 
 ## Deployment
