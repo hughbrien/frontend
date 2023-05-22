@@ -10,7 +10,7 @@ GLOBAL_lIST = []
 SERVICE_VERSION = "2.0.7"
 
 @app.route('/webhook',  methods=['GET','POST'])
-def webhook():  # put application's code here
+def webhook():  # put changes here
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         json = request.json
