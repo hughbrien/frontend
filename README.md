@@ -1,7 +1,8 @@
 # frontend
 Frontend in Python / Changes for the Demo / Fixed the Bug
 
-- Ensure you are access to the appropriate docker runtime
+- Ensure you are have access to an  appropriate docker runtime/envioronment such as ***Docker Desktop*** [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+- 
 - You also need the following
 - Cluster Authentication
 - Read / Write Access to the  Repository
@@ -13,7 +14,7 @@ Frontend in Python / Changes for the Demo / Fixed the Bug
 - @app.route('/lastrequest',  methods=['GET'])
 - @app.route('/version',  methods=['GET'])
 - @app.route('/healthz/live')
--@app.route('/healthz/ready')
+- @app.route('/healthz/ready')
 
 
 ## Changes in Komodor 
@@ -30,9 +31,17 @@ Frontend in Python / Changes for the Demo / Fixed the Bug
 
 
 ## Build the Image and Push 
+
+Clone this repository
 ```
-export VERSION=2.0.1
-docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .
+git clone https://github.com/hughbrien/frontend
+cd frontend
+```
+
+
+```
+export VERSION=X.X.X
+docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:X.X.X .
 ```
 
 ## Deployment
