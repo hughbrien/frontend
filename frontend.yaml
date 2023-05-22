@@ -4,15 +4,15 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
-    app.komodor.com/service.link.webhook: http://35.202.170.30:5000/webhook
+    app.komodor.com/service.link.webhook: http://35.202.170.30:5000/version
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.webhook: http://35.202.170.30:5000/webhook
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/33a2058ae31a8f970f83069e21488c303d987b1b
+    app.komodor.com/deploy.link.webhook: http://35.202.170.30:5000/version
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/36f90591681b6bd6288553d7962283b3246efbd6
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 33a2058ae31a8f970f83069e21488c303d987b1b
+    app.komodor.com/app.ref: 36f90591681b6bd6288553d7962283b3246efbd6
 
   labels:
     app: frontend
@@ -23,7 +23,7 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
