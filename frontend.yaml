@@ -8,35 +8,33 @@ metadata:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.webhook: http://35.202.170.30:5000/version
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/36f90591681b6bd6288553d7962283b3246efbd6
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/49ead7d22d44542c378f21fa5d5bf46029f551b6
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 36f90591681b6bd6288553d7962283b3246efbd6
+    app.komodor.com/app.ref: 49ead7d22d44542c378f21fa5d5bf46029f551b6
 
   labels:
     app: frontend
     branch: main
-    version: 2.0.7
+    version: 2.0.8
     author: hughbrien
-    demo: updated
-    updated: updated
 
 spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
         app: frontend
         branch: main
-        version: 2.0.7
+        version: 2.0.8
     spec:
       containers:
       - name: frontend
-        image: docker.io/hughbrien/frontend:2.0.7
+        image: docker.io/hughbrien/frontend:2.0.8
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
