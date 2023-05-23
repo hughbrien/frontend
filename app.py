@@ -2,7 +2,7 @@ from flask import Flask
 from flask import request
 import socket
 from datetime import datetime
-import time
+
 
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ def webhook():  # put changes here
         GLOBAL_lIST.append(json)
         return json
     else:
-        return 'Content-Type not supported!'
+        return 'Content-Type is not supported!.  Only POST is available on Webhook'
 
 @app.route('/lastrequest',  methods=['GET'])
 def lastrequest():  # put application's code here

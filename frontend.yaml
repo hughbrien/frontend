@@ -19,6 +19,9 @@ metadata:
     branch: main
     version: 2.0.7
     author: hughbrien
+    demo: updated
+    updated: updated
+
 spec:
   selector:
     matchLabels:
