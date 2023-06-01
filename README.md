@@ -54,8 +54,8 @@ kubectl apply -f ./frontend.yaml
 
 ## Rollout 
 ```
-export VERSION=2.0.1
-kubectl set image deployment/frontend frontend=frontend:2.0.1 -n frontend
+export VERSION=X.X.X
+kubectl set image deployment/frontend frontend=frontend:X.X.X -n frontend
 kubectl rollout restart deployment/frontend 
 ```
 
