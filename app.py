@@ -7,7 +7,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 GLOBAL_lIST = []
-SERVICE_VERSION = "2.0.7"
+SERVICE_VERSION = "2.0.9"
 
 @app.route('/webhook',  methods=['GET','POST'])
 def webhook():  # put changes here

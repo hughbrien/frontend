@@ -17,9 +17,9 @@ metadata:
   labels:
     app: frontend
     branch: main
-    version: 2.0.8
+    version: 2.0.9
     author: hughbrien
-    notes: 2.0.8
+    notes: 2.0.9
     owner: hughbrien
 
 spec:
@@ -32,11 +32,11 @@ spec:
       labels:
         app: frontend
         branch: main
-        version: 2.0.8
+        version: 2.0.9
     spec:
       containers:
       - name: frontend
-        image: docker.io/hughbrien/frontend:2.0.8
+        image: docker.io/hughbrien/frontend:2.0.9
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
