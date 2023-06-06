@@ -47,6 +47,15 @@ def welcome_message_json():  # put application's code here
            '"name":"Hugh Brien",' \
            '"email":"hugh@komodor.com - broken"}'
 
+@app.route('/machine', methods=['GET'])
+def machine_event():  # put application's code here
+    new_socket = socket
+    hostname = socket.gethostname()
+    return '{"type":"machine event",' \
+           '"hostname":"' + hostname + '",' \
+            '"cluster":"super-k8s-cluster",' \
+            '"namespace":"frontend",' \
+           '"owner":"hugh@komodor.com"}'
 
 @app.route('/healthz/live')
 def live():  # liveness
