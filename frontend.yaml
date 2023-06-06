@@ -17,9 +17,9 @@ metadata:
   labels:
     app: frontend
     branch: main
-    version: 2.0.9
+    version: 2.1.1
     author: hughbrien
-    notes: 2.0.9
+    notes: 2.1.1
     owner: hughbrien
 
 spec:
@@ -32,11 +32,11 @@ spec:
       labels:
         app: frontend
         branch: main
-        version: 2.0.9
+        version: 2.1.1
     spec:
       containers:
       - name: frontend
-        image: docker.io/hughbrien/frontend:2.0.9
+        image: docker.io/hughbrien/frontend:2.1.1
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
@@ -53,4 +53,4 @@ spec:
             path: /healthz/ready
             port: 5000
           initialDelaySeconds: 30
-          periodSeconds: 15
+          periodSeconds: 60
