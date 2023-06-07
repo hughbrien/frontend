@@ -14,6 +14,7 @@ metadata:
     app.komodor.com/app: https://github.com/hughbrien/frontend
     app.komodor.com/app.ref: 32af58afc87c497ea3dd95370de57889ddf2c480
 
+
   labels:
     app: frontend
     branch: main
@@ -54,3 +55,12 @@ spec:
             port: 5000
           initialDelaySeconds: 30
           periodSeconds: 60
+        resources:
+          limits:
+            cpu: 500m
+            ephemeral-storage: 1Gi
+            memory: 1Gi
+          requests:
+            cpu: 150m
+            ephemeral-storage: 1Gi
+            memory: 256Mii
