@@ -61,6 +61,6 @@ spec:
             ephemeral-storage: 1Gi
             memory: 1Gi
           requests:
-            cpu: 200m
-            ephemeral-storage: 1Gi
+            cpu: 250m
+            ephemeral-storage: 2Gi
             memory: 256Mi
