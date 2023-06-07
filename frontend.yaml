@@ -57,7 +57,7 @@ spec:
           periodSeconds: 60
         resources:
           limits:
-            cpu: 500m
+            cpu: 750m
             ephemeral-storage: 1Gi
             memory: 1Gi
           requests:
