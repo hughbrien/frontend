@@ -8,11 +8,11 @@ metadata:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.webhook: http://35.202.170.30:5000/version
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/0eeaf47a1f14973d5076c84a4d7d637dd667e11c
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/1c33eb57a4c6326756f864a3bd63ac4519d04ce4
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 0eeaf47a1f14973d5076c84a4d7d637dd667e11c
+    app.komodor.com/app.ref: 1c33eb57a4c6326756f864a3bd63ac4519d04ce4
 
 
   labels:
