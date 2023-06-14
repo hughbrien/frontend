@@ -3,16 +3,17 @@ from flask import request
 import socket
 from datetime import datetime
 import requests
-
+import time
 
 
 app = Flask(__name__)
 
 GLOBAL_lIST = []
-SERVICE_VERSION = "2.0.9"
+
+
+SERVICE_VERSION = "2.1.1"
 
 KOMODOR_CUSTOM_EVENT = {
-
         "eventType": "Google-Cloud-Event-MachineEvent",
         "summary": "Capture a Log Event from GKE. This is demonstration",
         "severity": "warning",
@@ -158,8 +159,8 @@ def live():  # liveness
 def ready():  # readyness
     return '{"status":"ready"}'
 
-@app.route('send_event')
-def send_event(url, payload, headers):
+@app.route('/send_event')
+def send_event():
     custom_event = {
         "eventType": "Google Cloud Event",
         "summary": "Host Change Events",
@@ -178,9 +179,23 @@ def send_event(url, payload, headers):
     }
     posting = requests.post("https://api.komodor.com/mgmt/v1/events",
                             json=custom_event,
-                            headers={"Content-Type": "application/json",
-                                     "x-api-key": "21527fbe-3fda-4080-b3ec-931a81a361ba"})
-    return posting
+                            headers={"Content-Type":"application/json",
+                                     "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
+    print(posting)
+    status_code = str(posting.ok)
+    result = {"http_return_code" : posting.status_code,
+              "http_status": status_code }
+    return result
+
+
+@app.route('/eat_memory')
+def eat_memory():  # liveness
+    big_array = []
+    big_array = [999999.999999999] * 1000
+    time.sleep(5)
+    print(big_array)
+    element_value = big_array[0]
+    return {"array":"big_array","size":"1000"}
 
 
 if __name__ == '__main__':
