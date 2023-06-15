@@ -188,8 +188,8 @@ def send_event():
     return result
 
 
-@app.route('/eat_memory')
-def eat_memory():  # liveness
+@app.route('/eatmemory')
+def eatmemory():  # liveness
     big_array = []
     big_array = [999999.999999999] * 1000
     time.sleep(5)
