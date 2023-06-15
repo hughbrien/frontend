@@ -11,7 +11,7 @@ app = Flask(__name__)
 GLOBAL_lIST = []
 
 
-SERVICE_VERSION = "2.1.1"
+SERVICE_VERSION = "2.1.2"
 
 KOMODOR_CUSTOM_EVENT = {
         "eventType": "Google-Cloud-Event-MachineEvent",

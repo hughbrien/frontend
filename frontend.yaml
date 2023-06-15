@@ -18,9 +18,9 @@ metadata:
   labels:
     app: frontend
     branch: main
-    version: 2.1.1
+    version: 2.1.2
     author: hughbrien
-    notes: 2.1.1
+    notes: 2.1.2
     owner: hughbrien
 
 spec:
@@ -33,7 +33,7 @@ spec:
       labels:
         app: frontend
         branch: main
-        version: 2.1.1
+        version: 2.1.2
     spec:
       containers:
       - name: frontend
@@ -58,9 +58,9 @@ spec:
         resources:
           limits:
             cpu: 750m
-            ephemeral-storage: 1Gi
+            ephemeral-storage: 2Gi
             memory: 1Gi
           requests:
             cpu: 250m
-            ephemeral-storage: 2Gi
+            ephemeral-storage: 1Gi
             memory: 256Mi
