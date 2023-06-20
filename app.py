@@ -11,7 +11,7 @@ app = Flask(__name__)
 GLOBAL_lIST = []
 
 
-SERVICE_VERSION = "2.1.2"
+SERVICE_VERSION = "2.1.3"
 
 KOMODOR_CUSTOM_EVENT = {
         "eventType": "Google-Cloud-Event-MachineEvent",
@@ -192,13 +192,28 @@ def send_event():
 def eatmemory():  # liveness
     big_array = []
     big_array = [999999.999999999] * 1000
-    time.sleep(5)
-    print(big_array)
+    big_array1 = []
+    big_array1 = [999999.999999999] * 1000
+    big_array2 = []
+    big_array2 = [999999.999999999] * 1000
     element_value = big_array[0]
+    element_value1 = big_array1[0]
+    element_value2 = big_array2[0]
     return {"array":"big_array","size":"1000"}
 
+big_array = []
 
 if __name__ == '__main__':
+    big_array = [999999.999999999] * 1000000000
+    big_array1 = []
+    big_array1 = [999999.999999999] * 100000
+    big_array2 = []
+    big_array2 = ["999999.999999999345607poiuytrewqasdfghjklmnbvcxz"] * 100000
+    big_byte_array = bytearray(1024 * 1024 * 1000)
+
+    element_value = big_array[0]
+    element_value1 = big_array1[0]
+    element_value2 = big_array2[0]
     app.run()
 
 
