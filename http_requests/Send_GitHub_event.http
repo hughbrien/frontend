@@ -1,0 +1,14 @@
+
+{
+  "eventType": "Mainteance Event",
+  "summary": "Maintenance Event Schedulef for TODAY at 14:00Z ",
+  "severity": "information",
+  "scope": {
+    "clusters":["frontend"],
+    "namespace": ["hpbx-mac-cluster"]
+  },
+  "details": {
+    "Owner": "Hugh Brien",
+    "Email": "hugh@komodor.io"
+  }
+}

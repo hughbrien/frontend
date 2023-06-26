@@ -1,7 +1,0 @@
-
-
-metadata: annotations: app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/<NEW_VALUE>
-metadata: annotations: app.komodor.com/app.ref: <NEW_VALUE>
-kubectl patch pod valid-pod -p '{"spec":{"containers":[{"name":"kubernetes-serve-hostname","image":"new image"}]}}'
-
-
