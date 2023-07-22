@@ -1,11 +1,12 @@
 
 
-# curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" -X POST http://localhost:3000/data
+#curl -d '{"first_name": "HUGH BRIEN", "last_name": "BRIEN"}' -H "Content-Type: application/json" -X POST http://localhost:5000/webhook
+
 POST http://localhost:5000/webhook
 Content-Type: application/json
 
 {
-  "first_name": "",
+  "first_name": "HUGH BRIEN",
   "last_name": "BRIEN"
 }
 

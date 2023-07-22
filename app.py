@@ -10,8 +10,7 @@ app = Flask(__name__)
 
 GLOBAL_lIST = []
 
-
-SERVICE_VERSION = "2.1.3"
+SERVICE_VERSION = "2.1.4"
 
 KOMODOR_CUSTOM_EVENT = {
         "eventType": "Google-Cloud-Event-MachineEvent",
@@ -95,7 +94,6 @@ TEST_EVENT = {
 }
 
 
-
 @app.route('/webhook',  methods=['GET','POST'])
 def webhook():  # put changes here
     content_type = request.headers.get('Content-Type')
@@ -166,7 +164,7 @@ def send_event():
         "summary": "Host Change Events",
         "severity": "error",
         "scope": {
-            "clusters": ["autopilot-cluster-2"],
+            "clusters": ["hpbx-mac-cluster"],
             "serviceNames": ["frontend"],
             "namespaces": ["frontend"]
         },
@@ -187,6 +185,28 @@ def send_event():
               "http_status": status_code }
     return result
 
+
+@app.route('/get_catalog_version')
+def get_service_version():
+    posting = requests.get("http://catalog.commerce.svc.cluster.local:5000/version",
+                            headers={"Content-Type":"application/json",
+                                     "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
+    print(posting)
+    status_code = str(posting.ok)
+    result = {"http_return_code" : posting.status_code,
+              "http_status": status_code }
+    return result
+
+@app.route('/get_shipping_version')
+def get_shipping_version():
+    posting = requests.get("http://shipping.commerce.svc.cluster.local:5000/version",
+                            headers={"Content-Type":"application/json",
+                                     "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
+    print(posting)
+    status_code = str(posting.ok)
+    result = {"http_return_code" : posting.status_code,
+              "http_status": status_code }
+    return result
 
 @app.route('/eatmemory')
 def eatmemory():  # liveness
