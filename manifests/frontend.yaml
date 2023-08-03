@@ -11,7 +11,7 @@ metadata:
     app.komodor.com/deploy.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.webhook: http://localhost:8001/
+    app.komodor.com/deploy.link.webhook: http://localhost:8001
     app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/b68340937ee78bcf3082a3fcbb6e2a06cde347cd
     app.komodor.com/tracked_files: |
       *.yaml
