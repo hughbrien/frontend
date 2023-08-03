@@ -4,19 +4,17 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
-
     link.argocd.argoproj.io/external-link: https://app.komodor.com/main/deep-dive/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
-
-    app.komodor.com/service.link.webhook: http://35.202.170.30:5000/version
-    app.komodor.com/service.link.jenkins: http://35.202.170.30:5000/version
-    app.komodor.com/deploy.link.jenkins: http://35.202.170.30:5000/version
+    app.komodor.com/service.link.webhook: http://localhost:8001/version
+    app.komodor.com/service.link.jenkins: http://localhost:8001/version
+    app.komodor.com/deploy.link.jenkins: http://localhost:8001/version
     app.komodor.com/service.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
     app.komodor.com/deploy.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
 
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.webhook: http://localhost:8001
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/b68340937ee78bcf3082a3fcbb6e2a06cde347cd
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/b344ea9dc54613b79b7b0509322f6e4f1a69060e
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
