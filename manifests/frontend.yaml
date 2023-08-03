@@ -20,7 +20,7 @@ metadata:
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 033ccdbb12ff0995426010d865298ce5342126ef
+    app.komodor.com/app.ref: b344ea9dc54613b79b7b0509322f6e4f1a69060e
 
   labels:
     cluster: hpbx-mac-cluster
