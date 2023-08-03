@@ -4,11 +4,15 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
+
+    link.argocd.argoproj.io/external-link: https://app.komodor.com/main/deep-dive/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
+
     app.komodor.com/service.link.webhook: http://35.202.170.30:5000/version
     app.komodor.com/service.link.jenkins: http://35.202.170.30:5000/version
     app.komodor.com/deploy.link.jenkins: http://35.202.170.30:5000/version
     app.komodor.com/service.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
     app.komodor.com/deploy.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
+
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.webhook: http://localhost:8001
