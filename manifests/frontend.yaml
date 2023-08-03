@@ -16,7 +16,8 @@ metadata:
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: b68340937ee78bcf3082a3fcbb6e2a06cde347cd
+    app.komodor.com/app.ref: 5cf85217fd6dbb273971fb45c6f3d1b4f975ccfd
+
   labels:
     cluster: hpbx-mac-cluster
     app: frontend
@@ -30,7 +31,7 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -61,11 +62,11 @@ spec:
         resources:
           limits:
             cpu: 750m
-            ephemeral-storage: 1Gi
-            memory: 1Gi
+            ephemeral-storage: 2Gi
+            memory: 512Gi
           requests:
             cpu: 245m
             # Reduce by 5 from 250 recommended
             ephemeral-storage: 1Gi
-            memory: 256Mi
+            memory: 234Mi
             # recude by 22 from 256 recommended
