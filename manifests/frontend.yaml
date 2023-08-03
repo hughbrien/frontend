@@ -29,7 +29,7 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -60,11 +60,11 @@ spec:
         resources:
           limits:
             cpu: 750m
-            ephemeral-storage: 2Gi
-            memory: 512Gi
+            ephemeral-storage: 1Gi
+            memory: 1Gi
           requests:
             cpu: 245m
             # Reduce by 5 from 250 recommended
             ephemeral-storage: 1Gi
-            memory: 234Mi
+            memory: 256Mi
             # recude by 22 from 256 recommended
