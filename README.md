@@ -101,3 +101,8 @@ Decode the password data:
 echo 'UyFCXCpkJHpEc2I9' | base64 --decode
 The output is similar to:
 S!B\*d$zDsb=
+
+### Create ArgoCD Entry 
+
+argocd app create frontend  --repo `git config --get remote.origin.url` --path manifests --dest-server https://kubernetes.default.svc --dest-namespace frontend
+

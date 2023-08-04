@@ -4,9 +4,8 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
-    link.argocd.argoproj.io/external-link: https://app.komodor.com/main/services/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
-
-    app.komodor.com/service.link.webhook: http://localhost:8001/version
+#    link.argocd.argoproj.io/external-link: https://app.komodor.com/main/services/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
+    link.argocd.argoproj.io/external-link: https://app.komodor.com/services/demo.hpbx-mac-cluster-frontend.frontend?accountId=fe52cf0b-42da-4ae1-a8db-776e0f1335a0&
     app.komodor.com/service.link.jenkins: http://localhost:8001/version
     app.komodor.com/deploy.link.jenkins: http://localhost:8001/version
     app.komodor.com/service.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
