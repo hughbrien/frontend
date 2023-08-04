@@ -14,11 +14,11 @@ metadata:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.webhook: http://localhost:8001
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/b344ea9dc54613b79b7b0509322f6e4f1a69060e
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/1c2bd4361c1e40b434f61a9cab168b03e9a29df1
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: b344ea9dc54613b79b7b0509322f6e4f1a69060e
+    app.komodor.com/app.ref: 1c2bd4361c1e40b434f61a9cab168b03e9a29df1
 
   labels:
     cluster: hpbx-mac-cluster
