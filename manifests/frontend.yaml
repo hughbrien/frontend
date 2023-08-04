@@ -4,7 +4,8 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
-    link.argocd.argoproj.io/external-link: https://app.komodor.com/main/deep-dive/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
+    link.argocd.argoproj.io/external-link: https://app.komodor.com/main/services/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
+
     app.komodor.com/service.link.webhook: http://localhost:8001/version
     app.komodor.com/service.link.jenkins: http://localhost:8001/version
     app.komodor.com/deploy.link.jenkins: http://localhost:8001/version
