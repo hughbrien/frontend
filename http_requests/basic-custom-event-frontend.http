@@ -1,5 +1,5 @@
 ###
-# curl --location 'https://api.komodor.com/mgmt/v1/events' --header 'x-api-key: 21527fbe-3fda-4080-b3ec-931a81a361ba' --header 'Content-Type: application/json' --data-raw '{"eventType": "Example", "summary": "Example of a custom ERROR Event","severity":"information","scope": {},"details": {"Owner": "Hugh Brien","Email": "hughATkomodor.io", slackid:"U04HJNA7Q7J"}}'
+# curl --location 'https://api.komodor.com/mgmt/v1/events' --header 'x-api-key: XXXXXXXXXXX' --header 'Content-Type: application/json' --data-raw '{"eventType": "Example", "summary": "Example of a custom ERROR Event","severity":"information","scope": {},"details": {"Owner": "Hugh Brien","Email": "hughATkomodor.io", slackid:"U04HJNA7Q7J"}}'
 #
 POST https://api.komodor.com/mgmt/v1/events
 x-api-key: 21527fbe-3fda-4080-b3ec-931a81a361ba
