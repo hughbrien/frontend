@@ -4,6 +4,8 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
+    sidecar.speedscale.com/inject: "true"
+
 #    link.argocd.argoproj.io/external-link: https://app.komodor.com/main/services/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
     link.argocd.argoproj.io/external-link: https://app.komodor.com/services/demo.hpbx-mac-cluster-frontend.frontend?accountId=fe52cf0b-42da-4ae1-a8db-776e0f1335a0&
     app.komodor.com/service.link.jenkins: http://localhost:8001/version
@@ -14,19 +16,19 @@ metadata:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.webhook: http://localhost:8001
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/b4694bc2b00052e096cbbc86e906a76af6df80a3
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/08ca7ddbba2902f2d6af0500fdc4aaf638bfa9bf
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: b4694bc2b00052e096cbbc86e906a76af6df80a3
+    app.komodor.com/app.ref: 08ca7ddbba2902f2d6af0500fdc4aaf638bfa9bf
 
   labels:
     cluster: hpbx-mac-cluster
     app: frontend
     branch: main
-    version: 2.1.5
+    version: 2.1.6
     author: hughbrien
-    notes: 2.1.5
+    notes: 2.1.6
     owner: hughbrien
 
 spec:
@@ -39,11 +41,11 @@ spec:
       labels:
         app: frontend
         branch: main
-        version: 2.1.5
+        version: 2.1.6
     spec:
       containers:
       - name: frontend
-        image: docker.io/hughbrien/frontend:2.1.5
+        image: docker.io/hughbrien/frontend:2.1.6
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
