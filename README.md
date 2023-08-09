@@ -106,3 +106,6 @@ S!B\*d$zDsb=
 
 argocd app create frontend  --repo `git config --get remote.origin.url` --path manifests --dest-server https://kubernetes.default.svc --dest-namespace frontend
 
+### Port Forward for Service
+kubectl port-forward -n frontend  service/frontend 5000:5000
+
