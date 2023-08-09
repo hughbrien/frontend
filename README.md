@@ -109,3 +109,6 @@ argocd app create frontend  --repo `git config --get remote.origin.url` --path m
 ### Port Forward for Service
 kubectl port-forward -n frontend  service/frontend 5000:5000
 
+kubectl port-forward -n frontend  service/frontend 5000:5000
+
+

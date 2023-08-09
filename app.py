@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 GLOBAL_lIST = []
 
-SERVICE_VERSION = "2.1.4"
+SERVICE_VERSION = "2.1.5"
 
 KOMODOR_CUSTOM_EVENT = {
         "eventType": "Google-Cloud-Event-MachineEvent",
@@ -115,11 +115,13 @@ def lastrequest():  # put application's code here
 
 @app.route('/version',  methods=['GET'])
 def version():  # put application's code here
+    hostname = socket.gethostname()
     headers = {'content-type': 'application/json'}
     json = {}
     json["timestamp"] =  datetime.now()
     json["version"] = SERVICE_VERSION
     json["service_name"] = "frontend"
+    json['hostname'] = str(hostname)
     json["author"] = "hughpbrien"
     print(json)
     return json
@@ -188,12 +190,14 @@ def send_event():
 
 @app.route('/get_catalog_version')
 def get_service_version():
+    hostname = socket.gethostname()
     posting = requests.get("http://catalog.commerce.svc.cluster.local:5000/version",
                             headers={"Content-Type":"application/json",
                                      "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
     print(posting)
     status_code = str(posting.ok)
     result = {"http_return_code" : posting.status_code,
+              "hostname": hostname,
               "http_status": status_code }
     return result
 
@@ -204,7 +208,10 @@ def get_shipping_version():
                                      "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
     print(posting)
     status_code = str(posting.ok)
+    hostname = socket.gethostname()
+
     result = {"http_return_code" : posting.status_code,
+              "hostname": hostname,
               "http_status": status_code }
     return result
 
