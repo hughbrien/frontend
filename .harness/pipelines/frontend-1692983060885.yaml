@@ -35,3 +35,4 @@ pipeline:
             spec: {}
             type: Cloud
         type: CI
+  tags: {}
