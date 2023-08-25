@@ -7,10 +7,9 @@ import time
 
 
 app = Flask(__name__)
-
 GLOBAL_lIST = []
 
-SERVICE_VERSION = "2.1.5"
+SERVICE_VERSION = "2.1.8"
 
 KOMODOR_CUSTOM_EVENT = {
         "eventType": "Google-Cloud-Event-MachineEvent",
@@ -196,9 +195,11 @@ def get_service_version():
                                      "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
     print(posting)
     status_code = str(posting.ok)
+    posting.content
     result = {"http_return_code" : posting.status_code,
-              "hostname": hostname,
+              "hostname": "catalog",
               "http_status": status_code }
+    result = posting.content
     return result
 
 @app.route('/get_shipping_version')
@@ -211,7 +212,7 @@ def get_shipping_version():
     hostname = socket.gethostname()
 
     result = {"http_return_code" : posting.status_code,
-              "hostname": hostname,
+              "hostname": "shipping",
               "http_status": status_code }
     return result
 
@@ -242,13 +243,3 @@ if __name__ == '__main__':
     element_value1 = big_array1[0]
     element_value2 = big_array2[0]
     app.run()
-
-
-
-
-
-
-
-
-
-
