@@ -14,12 +14,12 @@ metadata:
 
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.webhook: http://10.0.0.8:8001
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/7f510884a7805c3a2ee7e05f8e276cbc503a7bc0
+    app.komodor.com/deploy.link.webhook: http://10.0.0.8:5000/webhook
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/2bb79f7bf4624191901433fd22c894a2de03e705
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 7f510884a7805c3a2ee7e05f8e276cbc503a7bc0
+    app.komodor.com/app.ref: 2bb79f7bf4624191901433fd22c894a2de03e705
 
   labels:
     tags.datadoghq.com/env: "development"
