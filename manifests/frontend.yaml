@@ -7,28 +7,24 @@ metadata:
     # sidecar.speedscale.com/inject: "true"
 #    link.argocd.argoproj.io/external-link: https://app.komodor.com/main/services/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
     link.argocd.argoproj.io/external-link: https://app.komodor.com/services/demo.hpbx-mac-cluster-frontend.frontend?accountId=fe52cf0b-42da-4ae1-a8db-776e0f1335a0&
-    app.komodor.com/service.link.jenkins: http://localhost:8001/version
-    app.komodor.com/deploy.link.jenkins: http://localhost:8001/version
+#    app.komodor.com/service.link.jenkins: http://localhost:8001/version
+#    app.komodor.com/deploy.link.jenkins: http://localhost:8001/version
     app.komodor.com/service.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
     app.komodor.com/deploy.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
 
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.webhook: http://localhost:8001
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/90587f2bbcf67edf42bb3207e44436ca16d2a1bb
+    app.komodor.com/deploy.link.webhook: http://10.0.0.8:8001
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/7f510884a7805c3a2ee7e05f8e276cbc503a7bc0
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 90587f2bbcf67edf42bb3207e44436ca16d2a1bb
+    app.komodor.com/app.ref: 7f510884a7805c3a2ee7e05f8e276cbc503a7bc0
 
   labels:
-
     tags.datadoghq.com/env: "development"
     tags.datadoghq.com/service: "frontend"
     tags.datadoghq.com/version: "2.1.9"
-    env: development
-    service: frontend
-    version: 2.1.9
     cluster: hpbx-mac-cluster
     branch: main
     author: hughbrien
@@ -37,7 +33,7 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 6
+  replicas: 2
   template:
     metadata:
       labels:
