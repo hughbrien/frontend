@@ -1,0 +1,39 @@
+{
+  "query_parameters": {},
+  "headers": {
+    "Cookie": "transposit-ut=c4tnjijbk29d3g860kh0g98m1m",
+    "X-Request-Start-Time": "1692219766303",
+    "User-Agent": "Go-http-client/2.0",
+    "Host": "console.transposit.com:443",
+    "Accept-Encoding": "gzip",
+    "Content-Length": "634",
+    "X-Forwarded-Port": "443",
+    "Content-Type": "application/json"
+  },
+  "http_method": "POST",
+  "parsed_body": {
+    "callback_url": "https://registry.hub.docker.com/u/hughbrien/basic-http-server/hook/56405d3708c74c66a7c9984a01e843ef/",
+    "push_data": {
+      "pusher": "hughbrien",
+      "pushed_at": 1692219765,
+      "tag": "0.0.2",
+      "images": [],
+      "media_type": "application/vnd.docker.container.image.v1+json"
+    },
+    "repository": {
+      "status": "Active",
+      "namespace": "hughbrien",
+      "name": "basic-http-server",
+      "repo_name": "hughbrien/basic-http-server",
+      "repo_url": "https://hub.docker.com/r/hughbrien/basic-http-server",
+      "description": "basic-http-server",
+      "full_description": null,
+      "star_count": 0,
+      "is_private": false,
+      "is_trusted": false,
+      "is_official": false,
+      "owner": "hughbrien",
+      "date_created": 1692215255
+    }
+  }
+}

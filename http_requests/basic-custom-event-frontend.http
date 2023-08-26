@@ -2,13 +2,13 @@
 # curl --location 'https://api.komodor.com/mgmt/v1/events' --header 'x-api-key: XXXXXXXXXXX' --header 'Content-Type: application/json' --data-raw '{"eventType": "Example", "summary": "Example of a custom ERROR Event","severity":"information","scope": {},"details": {"Owner": "Hugh Brien","Email": "hughATkomodor.io", slackid:"U04HJNA7Q7J"}}'
 #
 POST https://api.komodor.com/mgmt/v1/events
-x-api-key: 21527fbe-3fda-4080-b3ec-931a81a361ba
+x-api-key: 76702d67-230f-4a73-879f-f6260467d24a
 Content-Type: application/json
 
 {
-  "eventType": "Mainteance Event",
-  "summary": "Maintenance Event Schedulef for TODAY at 14:00Z ",
-  "severity": "information",
+  "eventType": "Docker Build Event",
+  "summary": "New Docker Image build hughbrien/frontend: ",
+  "severity": "warning",
   "scope": {
     "clusters":["frontend"],
     "namespace": ["hpbx-mac-cluster"]
@@ -18,3 +18,5 @@ Content-Type: application/json
     "Email": "hugh@komodor.io"
   }
 }
+
+

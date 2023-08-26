@@ -26,3 +26,18 @@ GET  http://localhost:5000/lastrequest
 GET  http://localhost:5000/version
 
 
+### Get Version
+GET  http://localhost:5000/machine
+
+
+### Get Version
+GET  http://localhost:5000/translate
+
+### Get Version
+GET  http://localhost:5000/eatmemory
+
+### Get Version
+GET  http://localhost:5000/get_shipping_version
+
+### Get Version
+GET  http://localhost:5000/get_catalog_version

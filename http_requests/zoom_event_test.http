@@ -1,0 +1,8 @@
+### Post Event to home page
+POST https://hughbrien.com/zoom_event.php
+Content-Type: application/json
+
+{
+  'eventType':'Docker Build Event'
+}
+
