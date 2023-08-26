@@ -216,30 +216,8 @@ def get_shipping_version():
               "http_status": status_code }
     return result
 
-@app.route('/eatmemory')
-def eatmemory():  # liveness
-    big_array = []
-    big_array = [999999.999999999] * 1000
-    big_array1 = []
-    big_array1 = [999999.999999999] * 1000
-    big_array2 = []
-    big_array2 = [999999.999999999] * 1000
-    element_value = big_array[0]
-    element_value1 = big_array1[0]
-    element_value2 = big_array2[0]
-    return {"array":"big_array","size":"1000"}
 
-big_array = []
+
 
 if __name__ == '__main__':
-    big_array = [999999.999999999] * 1000000000
-    big_array1 = []
-    big_array1 = [999999.999999999] * 100000
-    big_array2 = []
-    big_array2 = ["999999.999999999345607poiuytrewqasdfghjklmnbvcxz"] * 100000
-    big_byte_array = bytearray(1024 * 1024 * 1000)
-
-    element_value = big_array[0]
-    element_value1 = big_array1[0]
-    element_value2 = big_array2[0]
     app.run()
