@@ -1,5 +1,6 @@
 import requests
 
+# Checking values
 custom_event = {
   "eventType": "Google Cloud Event",
   "summary": "Host Change Events",
