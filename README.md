@@ -41,7 +41,11 @@ cd frontend
 
 ```
 export VERSION=X.X.X
-docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:X.X.X .
+docker buildx build --platform linux/amd64,linux/arm64 --push -t hugenet.jfrog.io/docker/frontend:X.X.X .
+
+docker pull hugenet.jfrog.io/docker/hello-world:latest
+
+
 ```
 
 ## Deployment
