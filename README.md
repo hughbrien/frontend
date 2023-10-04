@@ -38,13 +38,18 @@ git clone https://github.com/hughbrien/frontend
 cd frontend
 ```
 
+### Docker.io
+```
+
+docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:X.X.X .
 
 ```
-export VERSION=X.X.X
-docker buildx build --platform linux/amd64,linux/arm64 --push -t hugenet.jfrog.io/docker/frontend:X.X.X .
 
+### JFrog 
+```
+export VERSION=2.1.10
+docker buildx build --platform linux/amd64,linux/arm64 --push -t hugenet.jfrog.io/docker/frontend:2.1.10 .
 docker pull hugenet.jfrog.io/docker/hello-world:latest
-
 
 ```
 
