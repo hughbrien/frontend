@@ -25,27 +25,18 @@ metadata:
   name: frontend
   namespace: frontend
   annotations:
-    # sidecar.speedscale.com/inject: "true"
-#    link.argocd.argoproj.io/external-link: https://app.komodor.com/main/services/{{account-name}}.{{cluster}}-{{namespace}}.{{service}}
-    link.argocd.argoproj.io/external-link: https://app.komodor.com/services/demo.hpbx-mac-cluster-frontend.frontend?accountId=fe52cf0b-42da-4ae1-a8db-776e0f1335a0&
-#    app.komodor.com/service.link.jenkins: http://localhost:8001/version
-#    app.komodor.com/deploy.link.jenkins: http://localhost:8001/version
-    app.komodor.com/service.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
-    app.komodor.com/deploy.link.argocd: https://localhost:8090/applications/argocd/newfrontend?operation=false&resource=
-
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.webhook: http://10.0.0.8:5000/webhook
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/2bb79f7bf4624191901433fd22c894a2de03e705
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/be73693b5965dbc15066b673fb84d96d5c0d7451
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: 2bb79f7bf4624191901433fd22c894a2de03e705
+    app.komodor.com/app.ref: be73693b5965dbc15066b673fb84d96d5c0d7451
 
   labels:
     tags.datadoghq.com/env: "development"
     tags.datadoghq.com/service: "frontend"
-    tags.datadoghq.com/version: "2.1.9"
+    tags.datadoghq.com/version: "2.1.10"
     cluster: hpbx-mac-cluster
     branch: main
     author: hughbrien
@@ -54,17 +45,17 @@ spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
         app: frontend
         branch: main
-        version: 2.1.9
+        version: 2.1.10
     spec:
       containers:
       - name: frontend
-        image: docker.io/hughbrien/frontend:2.1.9
+        image: docker.io/hughbrien/frontend:2.1.10
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
@@ -84,10 +75,11 @@ spec:
           periodSeconds: 60
         resources:
           limits:
-            cpu: 500m
-            memory: 275Mi
+            cpu: 250m
+            memory: 512Mi
           requests:
-            cpu: 245m
+            cpu: 100m
             # Reduce by 5 from 250 recommended
-            memory: 234Mi
+            memory: 256Mi
             # recude by 22 from 256 recommended
+
