@@ -9,7 +9,7 @@ import time
 app = Flask(__name__)
 GLOBAL_lIST = []
 
-SERVICE_VERSION = "2.1.9"
+SERVICE_VERSION = "2.1.10"
 
 KOMODOR_CUSTOM_EVENT = {
         "eventType": "Google-Cloud-Event-MachineEvent",
