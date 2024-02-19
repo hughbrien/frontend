@@ -192,7 +192,7 @@ def get_service_version():
     hostname = socket.gethostname()
     posting = requests.get("http://catalog.commerce.svc.cluster.local:5000/version",
                             headers={"Content-Type":"application/json",
-                                     "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
+                                         "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
     print(posting)
     status_code = str(posting.ok)
     posting.content
