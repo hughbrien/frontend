@@ -55,7 +55,8 @@ docker pull hugenet.jfrog.io/docker/hello-world:latest
 
 ## Deployment
 ```
-kubectl apply -f ./frontend.yaml
+kubectl create ns frontend 
+kubectl apply -f ./manifests/
 
 ```
 
