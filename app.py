@@ -5,13 +5,12 @@ from datetime import datetime
 import requests
 import time
 
-
 app = Flask(__name__)
 GLOBAL_lIST = []
 
 SERVICE_VERSION = "2.1.10"
 
-KOMODOR_CUSTOM_EVENT = {
+CUSTOM_EVENT = {
         "eventType": "Google-Cloud-Event-MachineEvent",
         "summary": "Capture a Log Event from GKE. This is demonstration",
         "severity": "warning",
@@ -24,7 +23,7 @@ KOMODOR_CUSTOM_EVENT = {
             "hostname": "server-333332ww",
             "ipaddress": "192.169.1.1",
             "Owner": "Hugh Brien",
-            "Email": "hugh@komodor.io",
+            "Email": "hugh@hughbrien.com",
             "timestamp": "Tue, 06 Jun 2023 18:54:58 GMT",
             "url": "http://34.172.104.248:5000/webhook",
             "cluster_id": "autopilot-cluster-2",
@@ -173,13 +172,13 @@ def send_event():
             "hostname": "server-333332ww",
             "ipaddress": "192.169.1.1",
             "Owner": "Hugh Brien",
-            "Email": "hugh@komodor.io"
+            "Email": "hugh@hughbrien.com"
         }
     }
-    posting = requests.post("https://api.komodor.com/mgmt/v1/events",
+    posting = requests.post("http://frontend.frontend.svc.cluster.local:5000/webhook",
                             json=custom_event,
                             headers={"Content-Type":"application/json",
-                                     "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
+                                     "x-api-key":"demo-key"})
     print(posting)
     status_code = str(posting.ok)
     result = {"http_return_code" : posting.status_code,

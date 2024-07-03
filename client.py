@@ -14,7 +14,7 @@ custom_event = {
     "hostname": "server-333332ww",
     "ipaddress": "192.169.1.1",
     "Owner": "Hugh Brien",
-    "Email": "hugh@komodor.io"
+    "Email": "hugh@hughbrien.com"
   }
 }
 posting =requests.post("https://api.komodor.com/mgmt/v1/events",
