@@ -11,8 +11,23 @@ I use this application for many things.  Testing and learning a variety of Devel
 - Docker Repositories
 - Web Service in Python
 - Git Repository, Versions and Releases
-- General DevOps Knowledgeg
-- 
+- General DevOps Knowledge
+
+## Python Virtual Environment
+
+Create an installation of a Python Virtual Environment (venv) on MacOS or Linux
+
+python3 -m venv myenv<br/>
+source myenv/bin/activate<br/>
+
+```sh {"id":"01J2SRBKF05FFR36YG2QDKT87D"}
+
+```
+
+```sh {"id":"01J2SRB4FQRA49XKVKMRKWFZNR"}
+python3 -m venv myenv
+source myenv/bin/activate
+```
 
 ## Welcome to Stateful Demo.  I am running this example from my Mac
 
