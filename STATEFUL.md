@@ -20,6 +20,12 @@ Create an installation of a Python Virtual Environment (venv) on MacOS or Linux
 python3 -m venv myenv<br/>
 source myenv/bin/activate<br/>
 
+## Configure, Build and Run
+pip install -r requirements.txt
+flask run 
+curl -v http://localhost:5000
+
+
 ```sh {"id":"01J2SRBKF05FFR36YG2QDKT87D"}
 
 ```
