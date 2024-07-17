@@ -8,20 +8,21 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 
 ```
 
-```yaml 
-
+### Update the Deployment manifest 
+```yaml
     spec:
       containers:
           args:
-            - '--kubelet-insecure-tls'
-- 
+            - '--kubelet-insecure-tls' 
 ```
 
+### Change ClusterIP to LoadBalancer in the metrics-server Kubernetes Service manifest
+
 ```yaml
-Change ClusterIP to LoadBalancer
 spec:
   type: LoadBalancer
 ```
+
 ### Run the Commnands 
 ```shell
 kubectl top pods -A
