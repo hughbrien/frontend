@@ -27,11 +27,11 @@ metadata:
   annotations:
     app.komodor.com/service.link.github: https://github.com/hughbrien/frontend
     app.komodor.com/deploy.link.github: https://github.com/hughbrien/frontend
-    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/be73693b5965dbc15066b673fb84d96d5c0d7451
+    app.komodor.com/deploy.link.github-latestchange: https://github.com/hughbrien/frontend/commit/007b7701713272921e78abb0983a76f71645cf6a
     app.komodor.com/tracked_files: |
       *.yaml
     app.komodor.com/app: https://github.com/hughbrien/frontend
-    app.komodor.com/app.ref: be73693b5965dbc15066b673fb84d96d5c0d7451
+    app.komodor.com/app.ref: 007b7701713272921e78abb0983a76f71645cf6a
 
   labels:
     tags.datadoghq.com/env: "development"
@@ -40,12 +40,11 @@ metadata:
     cluster: hpbx-mac-cluster
     branch: main
     author: hughbrien
-    owner: hughbrien
 spec:
   selector:
     matchLabels:
       app: frontend
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -78,7 +77,7 @@ spec:
             cpu: 250m
             memory: 512Mi
           requests:
-            cpu: 100m
+            cpu: 200m
             # Reduce by 5 from 250 recommended
             memory: 256Mi
             # recude by 22 from 256 recommended

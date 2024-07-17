@@ -1,7 +1,7 @@
 ###
 # curl --location 'https://api.komodor.com/mgmt/v1/events' --header 'x-api-key: XXXXXXXXXXX' --header 'Content-Type: application/json' --data-raw '{"eventType": "Example", "summary": "Example of a custom ERROR Event","severity":"information","scope": {},"details": {"Owner": "Hugh Brien","Email": "hughATkomodor.io", slackid:"U04HJNA7Q7J"}}'
 #
-POST https://api.komodor.com/mgmt/v1/events
+POST http://localhost:5000/webhook
 x-api-key: 76702d67-230f-4a73-879f-f6260467d24a
 Content-Type: application/json
 
@@ -15,7 +15,7 @@ Content-Type: application/json
   },
   "details": {
     "Owner": "Hugh Brien",
-    "Email": "hugh@komodor.io"
+    "Email": "hugh@hughbrien.com"
   }
 }
 

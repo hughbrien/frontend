@@ -55,7 +55,8 @@ docker pull hugenet.jfrog.io/docker/hello-world:latest
 
 ## Deployment
 ```
-kubectl apply -f ./frontend.yaml
+kubectl create ns frontend 
+kubectl apply -f ./manifests/
 
 ```
 
@@ -68,8 +69,6 @@ kubectl set image deployment/frontend frontend=frontend:X.X.X -n frontend
 kubectl rollout restart deployment/frontend 
 ```
 
-## View Changes in Komodor 
-- [Frontend Service](https://app.komodor.com/services/demo.google-se-cluster-frontend.frontend)
 
 ## Need a link to the Services 
 
