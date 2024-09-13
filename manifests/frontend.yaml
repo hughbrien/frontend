@@ -36,7 +36,7 @@ metadata:
   labels:
     tags.datadoghq.com/env: "development"
     tags.datadoghq.com/service: "frontend"
-    tags.datadoghq.com/version: "2.1.10"
+    tags.datadoghq.com/version: "2.2.3"
     cluster: hpbx-mac-cluster
     branch: main
     author: hughbrien
@@ -50,11 +50,11 @@ spec:
       labels:
         app: frontend
         branch: main
-        version: 2.1.10
+        version: 2.2.3
     spec:
       containers:
       - name: frontend
-        image: docker.io/hughbrien/frontend:2.1.10
+        image: docker.io/hughbrien/frontend:2.2.3
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
