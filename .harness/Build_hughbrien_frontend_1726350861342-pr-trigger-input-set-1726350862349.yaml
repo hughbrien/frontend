@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_hughbrien_frontend_1726350861342-pr-trigger-input-set
+  identifier: Build_hughbrien_frontend_1726350861342prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: frontend_project
+  pipeline:
+    identifier: Build_hughbrien_frontend_1726350861342
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
