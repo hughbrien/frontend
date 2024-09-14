@@ -22,6 +22,11 @@ Frontend in Python / Changes for the Demo / Fixed the Bug
 - @app.route('/healthz/live')
 - @app.route('/healthz/ready')
 
+# Python Virtual Environment 
+``` 
+python3 -m venv .venv  
+source .venv/bin/activate 
+```
 
 ## Changes in Komodor 
 
