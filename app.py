@@ -4,11 +4,18 @@ import socket
 from datetime import datetime
 import requests
 import time
+import os
+# If __version__.py is in the same package as this script
+from __version__ import __version__
+
+current_version = __version__
+
+print(f"The current version of the package is: {current_version}")
 
 app = Flask(__name__)
 GLOBAL_lIST = []
 
-SERVICE_VERSION = "2.1.10"
+MASTER_VERSION = current_version
 
 CUSTOM_EVENT = {
         "eventType": "Google-Cloud-Event-MachineEvent",
@@ -92,6 +99,8 @@ TEST_EVENT = {
 }
 
 
+
+
 @app.route('/webhook',  methods=['GET','POST'])
 def webhook():  # put changes here
     content_type = request.headers.get('Content-Type')
@@ -117,7 +126,7 @@ def version():  # put application's code here
     headers = {'content-type': 'application/json'}
     json = {}
     json["timestamp"] =  datetime.now()
-    json["version"] = SERVICE_VERSION
+    json["version"] = MASTER_VERSION
     json["service_name"] = "frontend"
     json['hostname'] = str(hostname)
     json["author"] = "hughpbrien"
