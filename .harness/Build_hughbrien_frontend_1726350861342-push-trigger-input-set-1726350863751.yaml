@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_hughbrien_frontend_1726350861342-push-trigger-input-set
+  identifier: Build_hughbrien_frontend_1726350861342pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: frontend_project
+  pipeline:
+    identifier: Build_hughbrien_frontend_1726350861342
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
