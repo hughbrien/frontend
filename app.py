@@ -7,7 +7,6 @@ import time
 import os
 # If __version__.py is in the same package as this script
 from __version__ import __version__
-
 current_version = __version__
 
 print(f"The current version of the package is: {current_version}")

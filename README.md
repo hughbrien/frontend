@@ -33,18 +33,6 @@ pip install -r requirements
 flask run 
 ```
 
-## Changes in Komodor 
-
-- Make changes to the Source Code 
-- Commit and Push the Changes to the Source code
-- Retrieve the Github Hash from the Commit
-- Update the Deployment Manifest with the Github Hash from the Commit
-- Build and Push the Deployment to a PUBLIC/Private Repository 
-- ```docker buildx build --platform linux/amd64,linux/arm64 --push -t hughbrien/frontend:2.0.1 .```
-- ``` k apply -f frontend.yaml         ```
-- Commit change to Frontend manifest yaml.
-- Update/Confirm  your Deployment manifest has the correct Ropository Image reference
-
 
 ## Build the Image and Push 
 

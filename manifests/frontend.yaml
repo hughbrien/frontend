@@ -5,7 +5,7 @@ metadata:
     author: hughbrien
     branch: main
     cluster: hpbx-mac-cluster
-    version: 3.0.1
+    version: 3.0.2
   name: frontend
   namespace: frontend
 spec:
@@ -18,16 +18,17 @@ spec:
       labels:
         app: frontend
         branch: main
-        version: 3.0.1
+        version: 3.0.2
     spec:
       containers:
-      - image: docker.io/hughbrien/frontend:3.0.1
+      - image: docker.io/hughbrien/frontend:3.0.2
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
             path: /healthz/live
             port: 5000
           initialDelaySeconds: 30
+          periodSeconds: 60
           timeoutSeconds: 15
         name: frontend
         ports:
