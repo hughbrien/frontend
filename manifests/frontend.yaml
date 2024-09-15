@@ -5,7 +5,7 @@ metadata:
     author: hughbrien
     branch: main
     cluster: hpbx-mac-cluster
-    version: 3.0.2
+    version: 3.0.6
   name: frontend
   namespace: frontend
 spec:
@@ -18,10 +18,10 @@ spec:
       labels:
         app: frontend
         branch: main
-        version: 3.0.2
+        version: 3.0.6
     spec:
       containers:
-      - image: docker.io/hughbrien/frontend:3.0.2
+      - image: docker.io/hughbrien/frontend:3.0.6
         imagePullPolicy: Always
         livenessProbe:
           httpGet:

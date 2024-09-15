@@ -1,8 +1,16 @@
 #!/bin/sh
-#Update Version
+# When you Update Version
+
+BUILD_VERSION=$(python print_version.py)
+
+git add __version__.py
+git commit -m"Updated Version $BUILD_VERSION"
+git push
 
 # Specify the file to read from
-BUILD_VERSION=$(python print_version.py)
+
+git tag -a v${BUILD_VERSION} -m "Release version ${BUILD_VERSION}"
+git push origin v${BUILD_VERSION}
 
 echo "Building Frontend version ${BUILD_VERSION}"
 
