@@ -30,7 +30,11 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 
-flask run 
+flask run
+
+#To listen on any IP Address use the following
+flask run --host=0.0.0.0   
+
 ```
 
 
