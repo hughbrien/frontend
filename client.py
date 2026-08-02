@@ -17,10 +17,10 @@ custom_event = {
     "Email": "hugh@hughbrien.com"
   }
 }
-posting =requests.post("https://api.komodor.com/mgmt/v1/events",
+posting =requests.post("https://api.tester/mgmt/v1/events",
               json=custom_event,
               headers={"Content-Type":"application/json",
-                        "x-api-key":"21527fbe-3fda-4080-b3ec-931a81a361ba"})
+                        "x-api-key":"XXXXX"})
 
 print(posting)
 
